@@ -2,6 +2,7 @@ import React from "react";
 import "./Sidebar.css";
 import { Avatar } from "@material-ui/core";
 import { SearchOutlined } from "@material-ui/icons";
+import SidebarChat from "./SidebarChat";
 
 function Sidebar() {
   return (
@@ -10,12 +11,20 @@ function Sidebar() {
         <Avatar />
       </div>
       <div className="sidebar_search">
-        <div className="siderbae_searchContainer">
+        <div className="siderbar_searchContainer">
           <SearchOutlined />
-          <input placeholder="Search or Chat" type="text"></input>
+
+          <input
+            className="search"
+            placeholder="Search or Chat"
+            type="text"
+          ></input>
         </div>
       </div>
-      <div className="sidebar_chats"></div>
+      <div className="sidebar_chats">
+        <SidebarChat />
+        <SidebarChat />
+      </div>
     </div>
   );
 }
