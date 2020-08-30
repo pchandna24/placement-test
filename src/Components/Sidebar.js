@@ -27,7 +27,7 @@ function Sidebar() {
       <div className="sidebar_header">
         <Avatar src={`https://avatars.dicebear.com/api/human/pqrs.svg`} />
       </div>
-      <div className="sidebar_search">
+      {/* <div className="sidebar_search">
         <div className="siderbar_searchContainer">
           <SearchOutlined />
 
@@ -37,7 +37,7 @@ function Sidebar() {
             type="text"
           ></input>
         </div>
-      </div>
+      </div> */}
       <div className="sidebar_chats">
         <SidebarChat addNewChat />
         {chats.map((chat) => (

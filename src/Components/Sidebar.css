@@ -32,11 +32,12 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  border-right: 1px solid lightgray;
+  background: black;
+  border-right: 1px solid #1f1f1f;
 }
 .sidebar_chats {
   flex: 1;
-  background-color: white;
+  background-color: black;
   overflow-y: scroll;
 }
 

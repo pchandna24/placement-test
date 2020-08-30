@@ -61,13 +61,13 @@ function Chat() {
         </div>
         <div className="chat_headerRight">
           <IconButton>
-            <SearchOutlined />
+            <SearchOutlined className="chat_gray" />
           </IconButton>
           <IconButton>
-            <AttachFile />
+            <AttachFile className="chat_gray" />
           </IconButton>
           <IconButton>
-            <MoreVert />
+            <MoreVert className="chat_gray" />
           </IconButton>
         </div>
       </div>
