@@ -14,6 +14,15 @@ Major **functionalities** are-.
 **Here is the link:**
 [https://placement-test-aa445.web.app/chats/5cnw0igXJG1kCGLjAuzJ](https://placement-test-aa445.web.app/chats/5cnw0igXJG1kCGLjAuzJ)
 
+# Running the code locally
+
+To run the code locally please follow the given commands:
+```
+https://github.com/pchandna24/placement-test.git
+npm install 
+npm run start
+```
+
 # UI Screenshots
 - Desktop
 ![Task Image 1](https://github.com/pchandna24/placement-test/blob/master/Screenshots/desktop.PNG)
