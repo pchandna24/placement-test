@@ -6,6 +6,7 @@ import MicIcon from "@material-ui/icons/Mic";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { useParams } from "react-router-dom";
 import db from "../firebase";
+import firebase from "firebase";
 
 function Chat() {
   const [seed, setSeed] = useState("");
@@ -37,6 +38,11 @@ function Chat() {
   const sendMessage = (e) => {
     e.preventDefault();
     console.log(input);
+    db.collection("chats").doc(chatId).collection("messages").add({
+      message: input,
+      name: "Guest User",
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
     setInput("");
   };
 
@@ -46,7 +52,12 @@ function Chat() {
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
         <div className="chat_headerInfo">
           <h3>{chatName}</h3>
-          <p>Last seen at ...</p>
+          <p>
+            Last seen at{" "}
+            {new Date(
+              messages[messages.length - 1]?.timestamp?.toDate()
+            ).toUTCString()}
+          </p>
         </div>
         <div className="chat_headerRight">
           <IconButton>
@@ -62,7 +73,11 @@ function Chat() {
       </div>
       <div className="chat_body">
         {messages.map((message) => (
-          <p className={`chat_message ${true && "chat_receiver"}`}>
+          <p
+            className={`chat_message ${
+              message.name == "Guest User" && "chat_receiver"
+            }`}
+          >
             <span className="chat_name">{message.name}</span>
             {message.message}
             <span className="chat_timestamp">

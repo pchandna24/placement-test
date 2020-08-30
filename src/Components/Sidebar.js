@@ -25,7 +25,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar_header">
-        <Avatar />
+        <Avatar src={`https://avatars.dicebear.com/api/human/pqrs.svg`} />
       </div>
       <div className="sidebar_search">
         <div className="siderbar_searchContainer">
