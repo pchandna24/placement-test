@@ -52,7 +52,7 @@ function Chat() {
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
         <div className="chat_headerInfo">
           <h3>{chatName}</h3>
-          <p>
+          <p className="chat_mobile">
             Last seen at{" "}
             {new Date(
               messages[messages.length - 1]?.timestamp?.toDate()

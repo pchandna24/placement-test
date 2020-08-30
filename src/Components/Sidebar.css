@@ -37,5 +37,16 @@
 .sidebar_chats {
   flex: 1;
   background-color: white;
-  overflow: hidden;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
 }

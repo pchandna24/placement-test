@@ -31,12 +31,13 @@
   min-width: 100px;
 }
 .chat_body {
-  background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSE5qFJtdwA8uqSafLQsFdGFamrIGJM5zM8Zw&usqp=CAU");
   flex: 1;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   padding: 30px;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .chat_message {
@@ -91,4 +92,15 @@
 .chat_footer > .MuiSvgIcon-root {
   padding: 10px;
   color: gray;
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+@media only screen and (max-width: 500) {
+  .chat_mobile {
+    display: none;
+  }
 }
